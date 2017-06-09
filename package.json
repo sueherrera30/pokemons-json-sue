@@ -1,0 +1,27 @@
+{
+  "name": "pokemons-json-sue",
+  "version": "1.0.0",
+  "main": "serve.js",
+  "scripts": {
+    "test": "https://github.com/sueherrera30/pokemons-json-sue.git"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sueherrera30/pokemons-json-sue.git"
+  },
+  "keywords": [
+    "js",
+    "xhr",
+    "json"
+  ],
+  "author": "Sue Martinez <sueherrera30@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sueherrera30/pokemons-json-sue/issues"
+  },
+  "homepage": "https://github.com/sueherrera30/pokemons-json-sue#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
