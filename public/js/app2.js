@@ -32,12 +32,19 @@ var mostrarPokemones = function(pokemones){
 
 
   var informacionCompleta = function () {
+	 
+	  var img =$(this).find("img").attr("src");
+	  var nombre = ($(this).find("p").text());
+	
 	var urlEspecie = $(this).data("info");
 	$.get(urlEspecie,function(response){
    $("#color").text(response.color.name);
   $("#habitat").text(response.habitat.name);
   $("#shape").text(response.shape.name);
   $("#genera").text(response.genera[0].genus);	
+   $("#imagenModal").attr("src",img);
+		$("#nombreModal").text(nombre);
+		
  }
 		
 )};
