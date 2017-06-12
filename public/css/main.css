@@ -4,3 +4,12 @@ body{
 .nav-wrapper{
 	background-color: bisque;
 }
+
+.poke-casa{
+ width:60%;
+ height: 60%;
+}
+
+.card{
+ padding:3%;
+}
