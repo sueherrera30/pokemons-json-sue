@@ -13,7 +13,7 @@ var pokecargador = function(){
 };
 
   var plantillaPokemones = 
-	  '<div class="pokemoncitos card col s3" data-info ="__url__">'+
+	  '<div class="pokemoncitos card col s3" data-info ="__url__" data-target="modal1">'+
 	  '<img class="responsive-img " src="assets/img/__nombre__.png" >'+'<p class="center green-text">__nombre__</p>'+  
 	'</div>';
 
@@ -34,12 +34,12 @@ var mostrarPokemones = function(pokemones){
   var informacionCompleta = function () {
 	var urlEspecie = $(this).data("info");
 	$.get(urlEspecie,function(response){
-    
-  $("#color").text(response.color.name);
+   $("#color").text(response.color.name);
   $("#habitat").text(response.habitat.name);
   $("#shape").text(response.shape.name);
-  $("#genera").text(response.genera[0].name);	
+  $("#genera").text(response.genera[0].genus);	
  }
+		
 )};
 
 
