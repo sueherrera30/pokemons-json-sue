@@ -5,11 +5,13 @@ body{
 	background-color: bisque;
 }
 
-.poke-casa{
- width:60%;
- height: 60%;
+img{
+ width:50%;
+ height: 200px;
 }
-
 .card{
- padding:3%;
+ height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
