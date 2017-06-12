@@ -1,28 +1,42 @@
-$.getJSON("http://pokeapi.co/api/v2/pokemon", function(response){
-	var pokemons = response.results;
-	constructorDePokemones(pokemons);
-});
 
-
-function constructorDePokemones(pokemons){
- var $pokeContenedor = $(".poke-contenedor");
-	
-pokemons.forEach(function(pokemon){
-	 /*creamos elementos*/
-	var $fila = $("<div/>", {"class":"row"});
-	var $contenedorPokemon = $("<div/>",{"class":"col s3 offset-s1 card"});
-	var $imagen = $("<img>",{"class":"responsive-img pokeImagen"});
-	$imagen.attr("src","assets/img/beedrill.png");
-	var $textoNombre = $("<p/>");
-	
-	$textoNombre.text(pokemons.name);
-	 $contenedorPokemon.data("nombre:"+pokemon.name);
-	
-	$contenedorPokemon.append($textoNombre);
-	$contenedorPokemon.append($imagen);
-	$contenedorPokemon.append($textoNombre);
-	$fila.append($contenedorPokemon);
-	$pokeContenedor.append($fila);
-
- });
+var cargarPagina = function(){
+  pokecargador();
+  /*$(document).on("click",".pokemoncitos",informacionCompleta);*/
+ /* $('.modal').modal();*/
 }
+
+var pokecargador = function(){
+  var url ="https://pokeapi.co/api/v2/pokemon/";
+  $.get(url,function(response){
+    var pokemones = response.results;
+    mostrarPokemones(pokemones);
+  });
+};
+
+  var plantillaPokemones = 
+	
+	  '<div class="poke-casa card col s3 ">'+
+	  '<img class="responsive-img" src="assets/img/__nombre__.png" >'+'<p>__nombre__</p>'+  
+	'</div>';
+var mostrarPokemones = function(pokemones){
+  var $casaPokemones= $("#poke-contenedor");
+	var html = '';
+  pokemones.forEach(function(pokemon){	  
+   
+    html += plantillaPokemones.replace(/__nombre__/g, pokemon.name)   
+});
+    $casaPokemones.html(html);
+};
+
+					
+
+ /* var informacionCompleta = function () {
+	var $casaPokemones= $("#poke-contenedor");
+    var url = $(this).data("url");
+     $.getJSON(url, function (response){
+       $casaPokemones.html(
+       plantillaPlaneta.replace("__nombre__", response.name)
+       );
+    });
+ }*/
+$(document).ready(cargarPagina);
