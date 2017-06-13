@@ -4,16 +4,18 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Pokemons de sue</title>
+	<link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
 	<link rel="stylesheet" href="css/materialize.min.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
    <!--navegador-->
   <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo center">Vamo' a poke-dexear</a>
+    <div class="nav-wrapper light-green lighten-3">
+      <a href="#" class="brand-logo center deep-purple-text text-lighten-3 ">Vamo' a poke-dexear</a>
     </div>
   </nav>
+  
   <!--pokemones-->
   <section class="container" >
   <div class="row" id="poke-contenedor">
@@ -23,18 +25,20 @@
   </section>
   
   
-  	<div id="modal1" class="modal">
+  	<div id="modal1" class="modal row yellow accent-1">
       <div class="modal-content">
-      <h4>Poke-informacion</h4>
-       <h6 id="nombreModal"></h6>
-      <p><strong>color:</strong><span id="color"></span></p>
-	  <p><strong>habitat:</strong><span id="habitat"></span></p>
-	  <p><strong>shape:</strong><span id="shape"></span></p>
-    <p><strong>genera:</strong><span id="genera"></span></p>	
+      <div class="col s6 offset s2">
+       <h4 class=" red-text text-accent-3">Poke-informacion</h4>
+       <h5 id="nombreModal" class="teal-text text-lighten-1"></h5>
+       <p><strong class="pink-text text-accent-2">color:</strong><span id="color"></span></p>
+	   <p><strong class="pink-text text-accent-2">habitat:</strong><span id="habitat"></span></p>
+	   <p><strong class="pink-text text-accent-2">shape:</strong><span id="shape"></span></p>
+       <p><strong class="pink-text text-accent-2">genera:</strong><span id="genera"></span></p>
+      </div> 
+         <img id="imagenModal" src="" alt="pokemones" class="col s4"> 	
      </div>
-      <img id="imagenModal" src="" alt="pokemones">
-    <div class="modal-footer">
-     <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Siguiente</a>
+    <div class="modal-footer col s12 pink accent-1">
+     <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">CERRAR</a>
     </div>
    </div>
   

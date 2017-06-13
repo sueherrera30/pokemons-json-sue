@@ -1,13 +1,12 @@
 body{
-	background-color:dimgrey;	
+	background-color:dimgrey;
+	font-family: 'Pangolin', cursive;
 }
-.nav-wrapper{
-	background-color: bisque;
-}
+
 
 img{
  width:50%;
- height: 200px;
+ height: 150px;
 }
 .card{
  height: 200px;
@@ -15,4 +14,20 @@ img{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.pokemoncitos{
+	background-color:rgba(255,255,255,.8);
+}
+
+#modal1{
+ display: flex;
+ align-content: space-around;
+}
+
+#imagenModal{
+ margin-left:3%;	
+ margin-top: 10%;
+ width:30%;
+ height: 30%;
+
 }
